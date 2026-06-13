@@ -1,0 +1,88 @@
+The ``text_indentation`` function
+=================================
+
+Import function:
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Normal text:
+
+    >>> text_indentation("Hello. How are you? Fine: yes")
+    Hello.
+    <BLANKLINE>
+    How are you?
+    <BLANKLINE>
+    Fine:
+    <BLANKLINE>
+    yes
+
+Text with spaces after punctuation:
+
+    >>> text_indentation("Hello.   How are you?   Fine:   yes")
+    Hello.
+    <BLANKLINE>
+    How are you?
+    <BLANKLINE>
+    Fine:
+    <BLANKLINE>
+    yes
+
+Text without punctuation:
+
+    >>> text_indentation("Hello World")
+    Hello World
+
+Text with only one period:
+
+    >>> text_indentation(".")
+    .
+    <BLANKLINE>
+
+Text with punctuation together:
+
+    >>> text_indentation("Hi.:?")
+    Hi.
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+
+Empty string:
+
+    >>> text_indentation("")
+
+Text starts with spaces:
+
+    >>> text_indentation("   Hello. World")
+    Hello.
+    <BLANKLINE>
+    World
+
+Text is integer:
+
+    >>> text_indentation(12)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+Text is None:
+
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+Text is list:
+
+    >>> text_indentation(["Hello"])
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+Missing argument:
+
+    >>> text_indentation()
+    Traceback (most recent call last):
+    ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
