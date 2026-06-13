@@ -1,0 +1,59 @@
+The ``add_integer`` function
+============================
+
+Import function:
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Normal addition:
+
+    >>> add_integer(1, 2)
+    3
+
+Default b value:
+
+    >>> add_integer(1)
+    99
+
+Negative numbers:
+
+    >>> add_integer(-1, -2)
+    -3
+
+Float numbers are casted to integers:
+
+    >>> add_integer(1.5, 2.7)
+    3
+
+Float with default b:
+
+    >>> add_integer(1.5)
+    99
+
+a is not int or float:
+
+    >>> add_integer("School", 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+b is not int or float:
+
+    >>> add_integer(1, "School")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+None as a:
+
+    >>> add_integer(None, 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+None as b:
+
+    >>> add_integer(1, None)
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
