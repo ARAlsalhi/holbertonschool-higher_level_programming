@@ -1,0 +1,73 @@
+The ``say_my_name`` function
+============================
+
+Import function:
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Normal full name:
+
+    >>> say_my_name("John", "Smith")
+    My name is John Smith
+
+Only first name:
+
+    >>> say_my_name("John")
+    My name is John 
+
+Empty first name:
+
+    >>> say_my_name("", "Smith")
+    My name is  Smith
+
+Empty last name:
+
+    >>> say_my_name("John", "")
+    My name is John 
+
+Both empty:
+
+    >>> say_my_name("", "")
+    My name is  
+
+first_name is integer:
+
+    >>> say_my_name(12, "Smith")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+first_name is None:
+
+    >>> say_my_name(None, "Smith")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+first_name is list:
+
+    >>> say_my_name(["John"], "Smith")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+last_name is integer:
+
+    >>> say_my_name("John", 12)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
+last_name is None:
+
+    >>> say_my_name("John", None)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
+last_name is list:
+
+    >>> say_my_name("John", ["Smith"])
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
