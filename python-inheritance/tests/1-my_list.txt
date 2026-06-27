@@ -1,0 +1,52 @@
+The ``1-my_list`` module
+========================
+
+Import MyList:
+
+>>> MyList = __import__('1-my_list').MyList
+
+Create an empty MyList:
+
+>>> my_list = MyList()
+>>> print(my_list)
+[]
+
+Check that MyList inherits from list:
+
+>>> isinstance(my_list, list)
+True
+
+Append values:
+
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+Print sorted list:
+
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+Original list should not change:
+
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+Test negative numbers:
+
+>>> my_list2 = MyList()
+>>> my_list2.append(-3)
+>>> my_list2.append(10)
+>>> my_list2.append(0)
+>>> my_list2.print_sorted()
+[-3, 0, 10]
+
+Test empty list:
+
+>>> empty = MyList()
+>>> empty.print_sorted()
+[]
