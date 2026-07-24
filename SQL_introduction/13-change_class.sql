@@ -1,4 +1,4 @@
 -- Filter the score so we delete any score less than or equales 5
-DELETE score
-FROM seconde_table
+-- DELETE is remove the row so we DONT put column name after DELETE 
+DELETE FROM seconde_table
 WHERE score <= 5;
