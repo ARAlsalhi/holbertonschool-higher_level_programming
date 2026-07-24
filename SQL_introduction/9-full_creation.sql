@@ -1,9 +1,9 @@
 -- FULL Creation
 -- I create a sconde table here 
 CREATE TABLE IF NOT EXISTS second_table (
-    id INT, 
-    name VARCHAR(256), 
-    score INT
+    id INT NOT NULL, 
+    name VARCHAR(256) NOT NULL, 
+    score INT NOT NULL
     constraint pk_id PRiMARY KEY (id)
 );
 
@@ -12,5 +12,5 @@ CREATE TABLE IF NOT EXISTS second_table (
 INSERT INTO second_table 
     (id, name, score) VALUES (1, 'John', 10),
     (id, name, score) VALUES (2, 'Alex', 3),
-    (id, name, score) VALUES (1, 'Bob', 14),
-    (id, name, score) VALUES (1, 'George', 8);
+    (id, name, score) VALUES (3, 'Bob', 14),
+    (id, name, score) VALUES (4, 'George', 8);
