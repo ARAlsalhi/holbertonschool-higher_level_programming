@@ -1,2 +1,4 @@
 -- Count Number
-Select id FROM first_table;
+Select COUNT(id) 
+FROM first_table
+WHERE id = 89;
