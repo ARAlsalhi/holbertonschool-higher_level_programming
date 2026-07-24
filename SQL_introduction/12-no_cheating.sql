@@ -1,5 +1,6 @@
 -- Update the value
 
-SELECT *
-FROM second_table
-WHERE name = 'Bob' AND SET score = 10;
+UPDATE second_table 
+SET score = 10
+WHERE name = 'Bob' 
+ORDER BY score DESC; 
