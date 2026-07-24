@@ -1,5 +1,5 @@
 -- First Table
-CREATE TABLES IF NOT EXISTS _in_hbtn_0c_0 (
+CREATE TABLE IF NOT EXISTS _in_hbtn_0c_0 (
 
     id INT NOT NULL,
     name VARCHAR(256) NOT NULL,
