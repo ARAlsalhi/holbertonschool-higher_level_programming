@@ -1,6 +1,10 @@
--- CREATE TABLE WITH DEFAULT CONDETION
+-- 
 
-CREATE TABLE IF NOT EXISTS unique_id (
-    id INT DEFAULT 1 UNIQUE,
-    name VARCHAR(256)
-);
+SELECT 
+    c.id,
+    c.name,
+    s.name 
+FROM cities AS c
+INNER JOIN states AS s
+ON s.id = c.state_id
+ORDER BY c.id;
