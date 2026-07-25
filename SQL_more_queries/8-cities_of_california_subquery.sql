@@ -1,5 +1,4 @@
--- A
-USE hbtn_0d_usa;
+-- NO join is Allow
 
 SELECT *
 FROM cities
@@ -9,4 +8,3 @@ WHERE states_id = (
     WHERE name = 'California'
     )
 ORDER BY id ASC;
-
