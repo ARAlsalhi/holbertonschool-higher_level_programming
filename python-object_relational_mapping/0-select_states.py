@@ -5,30 +5,32 @@
 Lists all states from the database passed as an argument.
 Results are sorted by states.id in ascending order.
 """
-import MySQLdb
+#!/usr/bin/python3
+"""Lists all states from the given database."""
+
 import sys
+import MySQLdb
+
 
 if __name__ == "__main__":
-    mysql_user = sys.argv[1]
-    mysql_password = sys.argv[2]
-    db_name = sys.argv[3]
-
-    db = MySQLdb.connect(
+    connection = MySQLdb.connect(
         host="localhost",
         port=3306,
-        user=mysql_user,
-        passwd=mysql_password,
-        db=db_name
+        user=sys.argv[1],
+        passwd=sys.argv[2],
+        db=sys.argv[3]
     )
 
-    cursor = db.cursor()
+    cursor = connection.cursor()
 
-    cursor.execute("SELECT * FROM states ORDER BY id ASC")
+    cursor.execute(
+        "SELECT * FROM states ORDER BY id ASC"
+    )
 
-    query_rows = cursor.fetchall()
+    states = cursor.fetchall()
 
-    for row in query_rows:
-        print(row)
+    for state in states:
+        print(state)
 
     cursor.close()
-    db.close()
+    connection.close()
