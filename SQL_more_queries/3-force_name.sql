@@ -1,5 +1,6 @@
--- CREATE HOST
+-- CREATE THE TABLE
 
-CREATE USER IF NOT EXISTS 'user_0d_1'@'localhost' IDENTIFIED BY 'user_0d_1_pwd';
-GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost';
-WITH GRANT OPTION;
+CREATE TABLE IF NOT EXISTS force_name (
+    id INT NOT NULL,
+    name VARCHAR(256) NOT NULL
+);
