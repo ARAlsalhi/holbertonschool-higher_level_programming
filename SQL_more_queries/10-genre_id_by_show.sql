@@ -1,4 +1,4 @@
--- 
+-- Genre ID by show
 SELECT 
     TS.title, 
     TSG.genre_id
