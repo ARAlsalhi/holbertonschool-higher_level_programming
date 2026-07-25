@@ -1,6 +1,6 @@
 -- CREATE TABLE THAT IS NOT NULL
 
-CREATE TABLE NOT NULL is_not_null (
+CREATE TABLE IF NOT NULL is_not_null (
     id INT DEFAULT 1,
     name VARCHAR(256)
 );
