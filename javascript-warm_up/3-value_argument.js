@@ -2,9 +2,8 @@
 
 const numOA = process.argv[2];
 
-if(numOA === undefined){
+if (numOA === undefined) {
     console.log('No argument');
-}
-else {
+} else {
     console.log(process.argv[2]);
 }
